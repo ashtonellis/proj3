@@ -1,7 +1,17 @@
+let paintSize = 25
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(displayWidth, displayHeight);
 }
 
 function draw() {
-  background(125);
+}
+
+function mouseDragged() {  
+  let r = random(200,255);
+  let g = random(200,255);
+  let b = random(200,255);
+  fill(r,g,b);
+  noStroke();
+  ellipse(mouseX, mouseY, paintSize);
 }
