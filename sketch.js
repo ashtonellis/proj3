@@ -38,4 +38,10 @@ function keyPressed() {
   } else { if (keyCode === DOWN_ARROW) {
     paintSize = paintSize -= 5;
   } }
+
+  if (keyCode === CONTROL) {
+    background(0);
+  } else { if (keyCode === ALT) {
+    background(255);
+  } } 
 }
