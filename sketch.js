@@ -16,18 +16,26 @@ function mouseDragged() {
 
 function keyTyped() {
   if (key === 'p') {
-    color = '#d5d6ea';
+    color = '#dabfff';
   } else if (key === 'y') {
-    color = '#f6f6eb';
+    color = '#fde74c';
   } else if (key === 'g') {
-    color = '#d7ecdd';
+    color = '#c3e991';
   } else if (key === 'o') {
-    color = '#f5d5cb';
+    color = '#f18f01';
   } else if (key === 'b') {
-    color = '#cdecff';
+    color = '#aaefdf';
   } else if (key === 'w') {
     color = '#ffffff';
   } else if (key === 'x') {
     color = '#000000';
   } 
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    paintSize = paintSize += 5;
+  } else { if (keyCode === DOWN_ARROW) {
+    paintSize = paintSize -= 5;
+  } }
 }
