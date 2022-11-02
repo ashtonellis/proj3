@@ -5,11 +5,6 @@ let sq = false;
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
-}
-
-function draw() {
-  fill(color);
-  noStroke();
   pur = createButton('purple');
     pur.style('background-color', '#dabfff')
     pur.position(0, 25);
@@ -30,11 +25,11 @@ function draw() {
     or.style('background-color', '#f18f01')
     or.position(189, 25);
     or.mousePressed(colorO);
-  ba = createButton('black');
-    ba.style('background-color', '#000000');
-    ba.style('color', '#ffffff');
-    ba.position(244, 25);
-    ba.mousePressed(colorBa);
+  b = createButton('black');
+    b.style('background-color', '#000000');
+    b.style('color', '#ffffff');
+    b.position(244, 25);
+    b.mousePressed(colorBl);
   wh = createButton('white');
     wh.style('background-color', '#ffffff');
     wh.position(289, 25);
@@ -66,12 +61,17 @@ function draw() {
     bwb.mousePressed(backW);
 }
 
+function draw() {
+  fill(color);
+  noStroke();
+}
+
 function colorP() {color = '#dabfff';}
 function colorB() {color = '#aaefdf';}
 function colorG() {color = '#c3e991';}
 function colorY() {color = '#fde74c';}
 function colorO() {color = '#f18f01';}
-function colorBa() {color = '#000000';}
+function colorBl() {color = '#000000';}
 function colorW() {color = '#ffffff';}
 
 function sizeSm() {paintSize = paintSize -= 5;}
