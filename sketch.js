@@ -1,5 +1,10 @@
 let paintSize = 25
 let color = '#000000'
+let img;
+
+function preload() {
+  img = loadImage('assets/controls.png')
+}
 
 function setup() {
   createCanvas(displayWidth, displayHeight);
@@ -8,6 +13,7 @@ function setup() {
 function draw() {
   fill(color);
   noStroke();
+  image(img, 0, 0, 300,120);
 }
 
 function mouseDragged() {
