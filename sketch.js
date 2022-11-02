@@ -12,57 +12,57 @@ function draw() {
   noStroke();
   pur = createButton('purple');
     pur.style('background-color', '#dabfff')
-    pur.position(0, 0);
+    pur.position(0, 25);
     pur.mousePressed(colorP);
   bl = createButton('blue');
     bl.style('background-color', '#aaefdf')
-    bl.position(51, 0);
+    bl.position(51, 25);
     bl.mousePressed(colorB);
   gr = createButton('green');
     gr.style('background-color', '#c3e991')
-    gr.position(90, 0);
+    gr.position(90, 25);
     gr.mousePressed(colorG);
   ye = createButton('yellow');
     ye.style('background-color', '#fde74c')
-    ye.position(138, 0);
+    ye.position(138, 25);
     ye.mousePressed(colorY);
   or = createButton('orange');
     or.style('background-color', '#f18f01')
-    or.position(189, 0);
+    or.position(189, 25);
     or.mousePressed(colorO);
   ba = createButton('black');
     ba.style('background-color', '#000000');
     ba.style('color', '#ffffff');
-    ba.position(244, 0);
+    ba.position(244, 25);
     ba.mousePressed(colorBa);
   wh = createButton('white');
     wh.style('background-color', '#ffffff');
-    wh.position(289, 0);
+    wh.position(289, 25);
     wh.mousePressed(colorW);
   sm = createButton('smaller');
     sm.style('background-color','#ffffff');
-    sm.position(0,25);
+    sm.position(0,0);
     sm.mousePressed(sizeSm);
   lg = createButton('larger');
     lg.style('background-color','#ffffff');
-    lg.position(56,25);
+    lg.position(56,0);
     lg.mousePressed(sizeLg);
   cr = createButton('circle');
     cr.style('background-color','#ffffff');
-    cr.position(104,25);
+    cr.position(104,0);
     cr.mousePressed(brushC);
   sq = createButton('square');
     sq.style('background-color','#ffffff');
-    sq.position(149,25);
+    sq.position(149,0);
     sq.mousePressed(brushS);
   bkb = createButton ('background-black');
     bkb.style('background-color', '#000000');
     bkb.style('color', '#ffffff');
-    bkb.position(204,25);
+    bkb.position(204,0);
     bkb.mousePressed(backB);
   bwb = createButton ('background-white');
     bwb.style('background-color','#ffffff');
-    bwb.position(323,25);
+    bwb.position(323,0);
     bwb.mousePressed(backW);
 }
 
