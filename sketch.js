@@ -8,57 +8,52 @@ function setup() {
   pur = createButton('purple');
     pur.style('background-color', '#dabfff')
     pur.position(0, 25);
-    pur.mousePressed(colorP);
+    pur.mousePressed(colorG);
   bl = createButton('blue');
     bl.style('background-color', '#aaefdf')
     bl.position(51, 25);
-    bl.mousePressed(colorB);
+    bl.mousePressed(colorY);
   gr = createButton('green');
     gr.style('background-color', '#c3e991')
     gr.position(90, 25);
-    gr.mousePressed(colorG);
+    gr.mousePressed(colorB);
   ye = createButton('yellow');
     ye.style('background-color', '#fde74c')
     ye.position(138, 25);
-    ye.mousePressed(colorY);
+    ye.mousePressed(colorO);
   or = createButton('orange');
     or.style('background-color', '#f18f01')
     or.position(189, 25);
-    or.mousePressed(colorO);
+    or.mousePressed(colorP);
   b = createButton('black');
     b.style('background-color', '#000000');
     b.style('color', '#ffffff');
     b.position(244, 25);
-    b.mousePressed(colorBl);
+    b.mousePressed(colorW);
   wh = createButton('white');
     wh.style('background-color', '#ffffff');
     wh.position(289, 25);
-    wh.mousePressed(colorW);
+    wh.mousePressed(colorBl);
   sm = createButton('smaller');
     sm.style('background-color','#ffffff');
     sm.position(0,0);
-    sm.mousePressed(sizeSm);
+    sm.mousePressed(sizeLg);
   lg = createButton('larger');
     lg.style('background-color','#ffffff');
     lg.position(56,0);
-    lg.mousePressed(sizeLg);
+    lg.mousePressed(sizeSm);
   cr = createButton('circle');
     cr.style('background-color','#ffffff');
     cr.position(104,0);
-    cr.mousePressed(brushC);
+    cr.mousePressed(brushShape);
   sq = createButton('square');
     sq.style('background-color','#ffffff');
     sq.position(149,0);
-    sq.mousePressed(brushS);
-  bkb = createButton ('background-black');
-    bkb.style('background-color', '#000000');
-    bkb.style('color', '#ffffff');
-    bkb.position(204,0);
-    bkb.mousePressed(backB);
-  bwb = createButton ('background-white');
-    bwb.style('background-color','#ffffff');
-    bwb.position(323,0);
-    bwb.mousePressed(backW);
+    sq.mousePressed(brushShape);
+  clear = createButton ('clear');
+    clear.style('background-color', '#ffffff');
+    clear.position(204,0);
+    clear.mousePressed(backColor);
 }
 
 function draw() {
@@ -77,11 +72,23 @@ function colorW() {color = '#ffffff';}
 function sizeSm() {paintSize = paintSize -= 5;}
 function sizeLg() {paintSize = paintSize += 5;}
 
-function brushC() {cir = true; sq = false;}
-function brushS() {cir = false; sq = true;}
+function brushShape() {
+  shape = random(0, 50)
+  if (shape <= 25) {
+    cir = true; sq = false;
+  } else { if (shape >= 26) {
+    cir = false; sq = true;
+  } }
+}
 
-function backB() {background(0);}
-function backW() {background(255);}
+function backColor() {
+  back = random(0,50);
+  if (back <= 25) {
+    background(0);
+  } else { if (back >= 26) {
+    background(255);
+  } }
+}
 
 function mouseDragged() {
   if (cir) {
